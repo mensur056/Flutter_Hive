@@ -13,7 +13,7 @@ class GeneralService implements IService {
     if (response.statusCode == 200) {
       final jsonData = response.data;
       if (jsonData is List) {
-        jsonData.map((e) => UserModel.fromJson(e)).toList();
+        return jsonData.map((e) => UserModel.fromJson(e)).toList();
       }
     }
     return null;
